@@ -1,0 +1,18 @@
+#include <iostream>
+#define N 10
+
+using namespace std;
+
+int main(){
+  int arr[N];
+  int cnt = 0;
+  float sum = 0.0;
+
+  do{
+    cin >> arr[cnt];
+    sum += arr[cnt];
+    ++cnt;
+    cout << " " << sum/cnt << endl;
+  } while (cnt < N);
+  return 0;
+}
