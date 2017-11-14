@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#define N 42
+
+using namespace std;
+
+int main(){
+    int arr[N];
+
+    srand(time(NULL));
+    for(int i=0; i<N; ++i){
+        arr[i] = (20 - rand()%41) * 2 + 1;
+    }
+    for(int i=0; i<N; ++i){
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
