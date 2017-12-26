@@ -1,0 +1,27 @@
+#include <iostream>
+#define N 20
+
+using namespace std;
+
+int main(){
+    setlocale(LC_CTYPE, "rus");
+    int vec[N];
+    int n, i = 0, k = 1, sum = 0;
+    cout << "Введите число в 10-ой СС" << endl;
+    cin >> n ;
+    while (n > 0){
+        vec[i] = n%2;
+        n = n/2;
+        i++;
+    }
+    for (int j=i-1; j>=0; j--){
+        cout << vec[j];
+    }
+    cout << endl;
+    for (int j=0; j<i; j++){
+        sum += vec[j]*k;
+        k *= 2;
+    }
+    cout << sum;
+    return 0;
+}
